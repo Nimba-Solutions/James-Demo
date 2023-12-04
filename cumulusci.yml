@@ -4,8 +4,6 @@ project:
     package:
         name: James-Demo
         api_version: '59.0'
-    dependencies:
-        - github: 'https://github.com/Nimba-Solutions/easy-fault-handler'
     git:
         default_branch: 'main'
         prefix_feature: 'feature/'
