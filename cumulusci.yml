@@ -1,0 +1,30 @@
+minimum_cumulusci_version: '3.78.0'
+project:
+    name: James-Demo
+    package:
+        name: James-Demo
+        api_version: '59.0'
+    dependencies:
+        - github: 'https://github.com/Nimba-Solutions/easy-fault-handler'
+    git:
+        default_branch: 'main'
+        prefix_feature: 'feature/'
+        prefix_beta: 'beta/'
+        prefix_release: 'release/'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/James-Demo/tests
+            options:
+                outputdir: robot/James-Demo/results
+
+    robot_testdoc:
+        options:
+            path: robot/James-Demo/tests
+            output: robot/James-Demo/doc/James-Demo_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
